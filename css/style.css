@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Nunito');
+*{
+box-sizing: border-box;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  padding-top: 30px;
+background-image: url(../img/bg.jpg);
+background-size: cover;
+}
+
+header {
+  text-align: center;
+}
+header img {
+  max-height: 100px;
+  cursor: pointer;
+}
+.logo {
+    width: 50px;
+    height: auto;
+
+}
+
+strong {
+  font-weight: 600;
+  line-height: 1.5em;
+}
+/*
+.type {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+ /* background-image: url("http://orig15.deviantart.net/24d8/f/2011/057/3/5/ge___energy_type_icons_by_aschefield101-d3agp02.png");
+  background-repeat: no-repeat;
+  background-size: 500% 400%;
+}
+
+.type.fire {
+  background-position: 25% 33%;
+}
+.type.water {
+  background-position: 63% 100%;
+}
+.type.grass {
+  background-position: 100% 33%;
+}*/
+.row {
+  display: block;
+  min-height: 50px;
+}
+
+.instructions {
+  text-align: center;
+  padding: 20px 0;
+}
+.instructions p {
+  font-size: 2em;
+}
+
+.characters {
+  display: flex;
+  justify-content: space-around;
+  transition: visibility 0.3s ease, opacity 0.3s ease, height 0.3s ease;
+width: 100%;
+}
+.characters.hidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+
+.char-container {
+  width: 25%;
+  text-align: center;
+  padding: 25px 0;
+  cursor: pointer;
+}
+.char-container img {
+  max-height: 100px;
+  margin-bottom: 13px;
+  transition: transform 0.3s ease, margin 0.3s ease;
+}
+.char-container h2 {
+  text-transform: capitalize;
+  font-size: 1.5em;
+  color: white;
+  font-weight: 600;
+  transition: font-size 0.3s ease;
+}
+.char-container:hover img {
+  transform: scale(1.3);
+  margin-bottom: 17px;
+}
+.char-container:hover h2 {
+  font-size: 1.2em;
+}
+
+.stadium {
+  background-image: url(../svg/stadiumbg.svg);
+background-position: center;
+    background-size: cover;
+}
+.stadium > section {
+  display: block;
+  box-sizing: border-box;
+}
+.stadium > section .char {
+  height: 175px;
+  position: relative;
+}
+.stadium > section .char > * {
+  position: absolute;
+  text-transform: capitalize;
+}
+.stadium > section .char img {
+  height: 150px;
+}
+.stadium > section .char .data {
+  background: rgba(255,255,255,0.7);
+  width: 20vw;
+  padding: 15px 2%;
+  box-sizing: border-box;
+  top: 25px;
+}
+.stadium > section .char .data progress {
+  width: 100%;
+}
+.stadium > section .char .data p {
+  text-align: right;
+}
+.stadium .enemy img {
+  right: 15vw;
+}
+.stadium .enemy .data {
+  left: 15vw;
+}
+.stadium .hero img {
+  left: 15vw;
+}
+.stadium .hero .data {
+  right: 15vw;
+}
+
+.attack-list {
+  display: flex;
+  flex-wrap: wrap;
+  background: #FFFAFA;
+  position: initial;
+  transition: opacity 0.3s ease;
+  text-transform: capitalize;
+}
+.attack-list.disabled {
+  opacity: 0.5;
+  position: relative;
+  z-index: -1;
+  cursor: initial;
+}
+.attack-list li {
+  width: 50%;
+  text-align: center;
+  padding: 25px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.attack-list li:hover {
+  background-color: indianred;
+    color: white;
+}
+
+.modal-out {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(33, 33, 33, 0.75);
+  z-index: 900;
+  
+}
+.modal-out .modal-in {
+  position: fixed;
+  top: 15vh;
+  left: 0;
+  right: 0;
+  width: 40vw;
+  height: 60vh;
+  margin: 0 auto;
+  background: #FFFAFA;
+    border-radius: 10px;
+}
+.modal-out .modal-in header {
+  position: relative;
+  min-height: 30px;
+  text-align: center;
+  padding: 10px 3%;
+  box-sizing: border-box;
+    color: black;
+}
+.modal-out .modal-in header h1 {
+  font-size: 2.5em;
+  font-family: 'IBM Plex Sans', sans-serif;
+ padding-top: 10px;
+}
+.modal-out .modal-in .close {
+  cursor: pointer;
+  position: absolute;
+  top: 13px;
+  right: 13px;
+}
+.modal-out .modal-in section {
+  box-sizing: border-box;
+    text-align: center;
+  padding: 25px 3%;
+    font-size: 25px;
+}
+.giphy_embed {
+    left: -20px;
+    position: absolute;
+
+}
